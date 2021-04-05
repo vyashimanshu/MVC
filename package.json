@@ -5,7 +5,7 @@
   "git":"https://github.com/vyashimanshu/MVC.git",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run",
+    "testFeature": "cypress run",
     "open": "cypress open"
   },
   "author": "HV",

@@ -13,3 +13,25 @@ When ('I am able to fetch All ToDo list using GET',()=>{
         
       })
 })
+
+
+When('I am able to create a ToDo list',()=>{
+    cy.request('POST', 'https://jsonplaceholder.typicode.com/todos/', { id:201,userId: 240, title: 'Harry',completederId: true }).then(
+                (response) => {
+                  expect(response.body).to.have.property('title', 'Harry') 
+                })
+})
+
+When('I am able to update a ToDo from list',()=>{
+    cy.request('PUT', 'https://jsonplaceholder.typicode.com/todos/2', {completederId: true }).then(
+        (response) => {
+            expect(response.status).to.be.eq(200)
+            expect(response.body.completederId).to.be.true
+        })  
+})
+
+When('I am able to delete a ToDo from list',()=>{
+    cy.request('DELETE','https://jsonplaceholder.typicode.com/todos/1').then(response =>{
+             expect(response.status).to.be.eq(200)
+         })
+})
