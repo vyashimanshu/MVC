@@ -1,0 +1,20 @@
+{
+  "name": "cypress_tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "git":"https://github.com/vyashimanshu/MVC.git",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run",
+    "open": "cypress open"
+  },
+  "author": "HV",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.8.0",
+    "cypress-cucumber-preprocessor": "^4.0.3"
+  },
+"cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+}
+}
