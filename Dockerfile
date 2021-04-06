@@ -6,6 +6,6 @@ COPY ./jsconfig.json ./jsconfig.json
 COPY ./package-lock.json ./package-lock.json
 COPY ./package.json ./package.json
 
-RUN npm install
-RUN npm run testFeature
+RUN npm install cypress
+RUN npm run test
 
