@@ -2,19 +2,27 @@
   "name": "cypress_tutorial",
   "version": "1.0.0",
   "description": "",
-  "git":"https://github.com/vyashimanshu/MVC.git",
+  "git": "https://github.com/vyashimanshu/CypressAutomation.git",
   "main": "index.js",
   "scripts": {
     "test": "cypress run \"/cypress/integration/*\"",
-    "open": "cypress open"
+    "open": "cypress open",
+    "report": "cypress run --reporter cypress-multi-reporters --reporter-options configFile=reporter-config.json",
+    "postreport": "npm run combine:reports"
+
   },
   "author": "HV",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^6.8.0",
-    "cypress-cucumber-preprocessor": "^4.0.3"
+    "cypress-cucumber-preprocessor": "^4.0.3",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0"
   },
-"cypress-cucumber-preprocessor": {
+  "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
-}
+  }
 }
